@@ -1,1 +1,0 @@
-# artificial_intelligence_sec_A_summer_2022
