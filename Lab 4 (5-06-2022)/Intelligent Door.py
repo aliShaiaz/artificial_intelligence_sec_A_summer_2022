@@ -1,0 +1,4 @@
+class aiDoor:
+  status="Closed"
+
+  
