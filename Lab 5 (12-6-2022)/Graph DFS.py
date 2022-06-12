@@ -22,28 +22,20 @@ graph = {
 }
 
 visited =[]
-queue=[]
+stack=[]
 
-def bfs (visited, graph, node, endNode):
-    visited.append(node)
-    queue.append(node)
-
-    while queue:
-        m=queue.pop(0)
-        if m==endNode:
-            break
-        print(m, end = " ")
-
-        for neighbour in graph[m]:
-            if neighbour not in visited:
-                visited.append(neighbour)
-                queue.append(neighbour)
+def dfs(visited, graph, node):  #function for dfs 
+    if node not in visited:
+        print (node)
+        visited.append(node)
+        for neighbour in graph[node]:
+            dfs(visited, graph, neighbour)
 
 # . . . Program Start . . . #
 
 print("\n// . . . Program Start . . . //\n\n")
 
 print("Following is the Breadth-First Search")
-bfs(visited, graph, 'Arad', 'Bucharest')
+dfs(visited, graph, 'Arad')
 
 print("\n\n\n// . . . Program End . . . //\n")
