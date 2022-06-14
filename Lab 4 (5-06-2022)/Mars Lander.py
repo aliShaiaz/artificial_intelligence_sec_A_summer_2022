@@ -5,5 +5,3 @@ class lander:
 
     # Behaviors #
 
-    def checkRock(self):
-        
